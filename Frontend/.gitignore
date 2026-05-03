@@ -1,0 +1,19 @@
+# Node
+node_modules/
+dist/
+.pnp
+.pnp.js
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
