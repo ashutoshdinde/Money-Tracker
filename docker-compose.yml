@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: money_postgres
+    environment:
+      POSTGRES_DB: moneytracker
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  backend:
+    build: ./Backend
+    container_name: money_backend
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+    environment:
+      - DATABASE_URL=jdbc:postgresql://postgres:5432/moneytracker
+      - DATABASE_USER=postgres
+      - DATABASE_PASSWORD=root
+
+volumes:
+  pgdata:
