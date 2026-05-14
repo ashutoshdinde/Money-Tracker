@@ -14,7 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("https://money-tracker-8mfdwt0z6-ashutoshdinde2003-5073s-projects.vercel.app", "http://localhost:5173")
+                        .allowedOrigins("https://money-tracker-8mfdwt0z6-ashutoshdinde2003-5073s-projects.vercel.app", "http://localhost:5173", "https://money-tracker-q3v2.onrender.com")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
