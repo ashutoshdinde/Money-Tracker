@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { format } from 'date-fns';
-
-const API_BASE_URL = 'http://localhost:8080/api';
+import { API_BASE_URL } from '@/app/apiConfig';
 
 export interface Category {
   id: string;

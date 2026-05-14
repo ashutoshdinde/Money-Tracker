@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Star, PiggyBank, Calendar } from 'lucide-react';
-
-const API_BASE_URL = 'http://localhost:8080/api';
+import { API_BASE_URL } from '@/app/apiConfig';
 
 interface StarredMonthRow {
   monthKey: string;

@@ -6,6 +6,7 @@ import { ExpenseTracker } from './components/ExpenseTracker';
 import { InvestmentsView } from './components/InvestmentsView';
 import { AdvancedFeatures } from './components/AdvancedFeatures';
 import { GlobalTrackedDashboard } from './components/GlobalTrackedDashboard';
+import { API_BASE_URL } from './apiConfig';
 import { LayoutDashboard, Receipt, TrendingUp, Settings, Star } from 'lucide-react';
 
 type Tab = 'dashboard' | 'tracked' | 'expenses' | 'investments' | 'advanced';
@@ -65,7 +66,7 @@ export default function App() {
           </div>
 
           <div className="text-center text-sm text-gray-500">
-            Built with React & Tailwind CSS · Backend API at localhost:8080
+            Built with React & Tailwind CSS · API {API_BASE_URL}
           </div>
         </div>
       </div>
