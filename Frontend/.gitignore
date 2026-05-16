@@ -11,9 +11,3 @@ dist/
 # OS
 .DS_Store
 
-# Environment files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
