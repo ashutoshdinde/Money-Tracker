@@ -10,7 +10,8 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-            .allowedOrigins("http://localhost:5173", "https://yourfrontenddomain.com")
+            .allowedOrigins("http://localhost:5173",
+                    "http://moneytracker-frontend-ashutosh-717279702410-ap-south-1-an.s3-website.ap-south-1.amazonaws.com/")
             .allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS")
                 .allowCredentials(true);
     }
