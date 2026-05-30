@@ -32,7 +32,7 @@ export function AdvancedFeatures() {
   return (
     <div className="space-y-6">
       <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
           <h2 className="text-xl flex items-center gap-2">
             <Repeat className="w-5 h-5" />
             Recurring Expenses
@@ -120,7 +120,7 @@ export function AdvancedFeatures() {
               return (
                 <div
                   key={recurring.id}
-                  className={`flex items-center justify-between p-4 rounded-lg border transition-colors ${
+                  className={`flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between p-4 rounded-lg border transition-colors ${
                     recurring.isActive
                       ? 'bg-blue-50 border-blue-200'
                       : 'bg-gray-50 border-gray-200 opacity-60'

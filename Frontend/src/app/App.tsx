@@ -25,9 +25,9 @@ export default function App() {
   return (
     <FinanceProvider>
       <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 py-6 space-y-6">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-6 text-white">
-            <h1 className="text-3xl mb-2">Personal Finance Tracker</h1>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-6">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-5 sm:p-6 text-white">
+            <h1 className="text-2xl sm:text-3xl mb-2">Personal Finance Tracker</h1>
             <p className="text-blue-100">
               Manage your salary, track expenses, and grow your investments
             </p>

@@ -15,7 +15,7 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
                     .allowedOrigins("http://localhost:5173",
-                            "http://moneytracker-frontend-ashutosh-717279702410-ap-south-1-an.s3-website.ap-south-1.amazonaws.com/")
+                            "http://moneytracker-frontend-ashutosh-717279702410-ap-south-1-an.s3-website.ap-south-1.amazonaws.com")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);

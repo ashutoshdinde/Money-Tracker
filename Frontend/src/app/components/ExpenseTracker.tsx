@@ -135,7 +135,7 @@ export function ExpenseTracker() {
       </div>
 
       <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between mb-4">
           <h2 className="text-xl">Expense History</h2>
           <div className="text-gray-600">
             Total: <span className="font-medium text-gray-900">₹{totalExpenses.toLocaleString()}</span>
@@ -182,7 +182,7 @@ export function ExpenseTracker() {
               return (
                 <div
                   key={expense.id}
-                  className="flex items-center justify-between p-4 bg-gray-50 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors"
+                  className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between p-4 bg-gray-50 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors"
                 >
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-1">
@@ -195,7 +195,7 @@ export function ExpenseTracker() {
                       {format(new Date(expense.date), 'MMM dd, yyyy · hh:mm a')}
                     </div>
                   </div>
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4 sm:justify-end">
                     <span className="text-lg font-medium text-red-600">
                       -₹{expense.amount.toLocaleString()}
                     </span>

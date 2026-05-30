@@ -30,7 +30,7 @@ export function MonthSelector() {
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-4 border border-gray-200">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <button
           onClick={handlePreviousMonth}
           className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
@@ -39,8 +39,8 @@ export function MonthSelector() {
           <ChevronLeft className="w-5 h-5" />
         </button>
 
-        <div className="flex items-center gap-4">
-          <h1 className="text-2xl">{displayMonth}</h1>
+        <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-4">
+          <h1 className="text-xl sm:text-2xl">{displayMonth}</h1>
           {remaining > 0 && (
             <button
               onClick={handleCarryForward}

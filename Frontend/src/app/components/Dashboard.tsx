@@ -61,7 +61,7 @@ export function Dashboard() {
           <Wallet className="w-5 h-5" />
           Monthly Salary
         </h2>
-        <div className="flex gap-3">
+        <div className="flex flex-col gap-3 sm:flex-row">
           <input
             type="number"
             value={salaryInput}
@@ -71,7 +71,7 @@ export function Dashboard() {
           />
           <button
             onClick={handleSetSalary}
-            className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+            className="w-full sm:w-auto px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
           >
             Set Salary
           </button>
@@ -108,7 +108,7 @@ export function Dashboard() {
       </div>
 
       <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
           <h2 className="text-xl">Allocate Funds</h2>
           <button
             onClick={() => setShowAddCategory(!showAddCategory)}
@@ -121,7 +121,7 @@ export function Dashboard() {
 
         {showAddCategory && (
           <div className="mb-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
-            <div className="flex gap-3">
+            <div className="flex flex-col gap-3 sm:flex-row">
               <input
                 type="text"
                 value={newCategoryName}
@@ -132,7 +132,7 @@ export function Dashboard() {
               />
               <button
                 onClick={handleAddCategory}
-                className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                className="w-full sm:w-auto px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
               >
                 Add
               </button>
@@ -141,7 +141,7 @@ export function Dashboard() {
                   setShowAddCategory(false);
                   setNewCategoryName('');
                 }}
-                className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors"
+                className="w-full sm:w-auto px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors"
               >
                 Cancel
               </button>
@@ -153,7 +153,7 @@ export function Dashboard() {
           {monthData.categories.map((category) => (
             <div
               key={category.id}
-              className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors"
+              className="flex flex-col gap-3 sm:flex-row sm:items-center p-4 bg-gray-50 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors"
             >
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
@@ -190,12 +190,12 @@ export function Dashboard() {
                   setAllocationInputs({ ...allocationInputs, [category.id]: e.target.value })
                 }
                 placeholder="Amount"
-                className="w-32 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full sm:w-32 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <button
                 onClick={() => handleAllocate(category.id)}
                 disabled={remaining <= 0}
-                className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
+                className="w-full sm:w-auto px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
               >
                 Allocate
               </button>
